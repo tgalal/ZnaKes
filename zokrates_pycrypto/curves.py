@@ -8,7 +8,7 @@ based on: https://github.com/HarryR/ethsnarks
 """
 
 from abc import ABC, abstractmethod
-from .fields import FQ, BN128Field, BLS12_381Field
+from .fields import FQ, BN128Field, BLS12_381Field, BLS12_377Field
 from .numbertheory import square_root_mod_prime, SquareRootError
 
 
@@ -304,3 +304,29 @@ class JubJub(EdwardsCurve):
     @staticmethod
     def infinity():
         return JubJub(BLS12_381Field(0), BLS12_381Field(1))
+    
+
+# values taken from https://protocol.penumbra.zone/main/crypto/decaf377.html
+class Decaf377(EdwardsCurve):
+    FIELD_TYPE = BLS12_377Field
+    # order of the field
+    JUBJUB_Q = BLS12_377Field.FIELD
+    # order of the curve
+    JUBJUB_E = 8444461749428370424248824938781546531355483705633632780774740985578885441532  # C*L == E
+    JUBJUB_C = BLS12_377Field(4)  # Cofactor
+    JUBJUB_L = BLS12_377Field(2111115437357092606062206234695386632838870926408408195193685246394721360383)
+    JUBJUB_A = BLS12_377Field(-1)  # Coefficient A
+    JUBJUB_D = BLS12_377Field(3021)  # Coefficient D
+
+    def __init__(self, x: BLS12_377Field, y: BLS12_377Field):
+        super().__init__(x, y)
+
+    @classmethod
+    def generator(cls):
+        x = 4959445789346820725352484487855828915252512307947624787834978378872129235627
+        y = 6060471950081851567114691557659790004756535011754163002297540472747064943288
+        return cls(BLS12_377Field(x), BLS12_377Field(y))
+
+    @staticmethod
+    def infinity():
+        return Decaf377(BLS12_377Field(0), BLS12_377Field(1))    
