@@ -134,7 +134,7 @@ Please follow [Angular commit style](https://github.com/angular/angular.js/blob/
 
     build: Changes to the build process or tools.
 
-scope is an optional keyword that provides context for where the change was made. It can be anything relevant to your package or development workflow (e.g., it could be the module or function name affected by the change).
+`scope` is an optional keyword that provides context for where the change was made. It can be anything relevant to your package or development workflow (e.g., it could be the module or function name affected by the change).
 
 For more information on commit message refer to the [site](https://py-pkgs.org/07-releasing-versioning.html#automatic-version-bumping)
 
