@@ -30,8 +30,6 @@ class TestEdDSA(unittest.TestCase):
 
     def test_random_signverify_babyjubjub(self):
         # Hardcoded for now till we have automatic test generation for ZoKrates test framework
-        key = 1997011358982923168928344992199991480689546837621580239342656433234255379025
-
         sk = PrivateKey.from_rand(curve=BabyJubJub)
         msg = urandom(32)
         sig = sk.sign(msg)
@@ -41,8 +39,6 @@ class TestEdDSA(unittest.TestCase):
 
     def test_random_signverify_jubjub(self):
         # Hardcoded for now till we have automatic test generation for ZoKrates test framework
-        key = 1997011358982923168928344992199991480689546837621580239342656433234255379025
-
         sk = PrivateKey.from_rand(curve=JubJub)
         msg = urandom(32)
         sig = sk.sign(msg)
