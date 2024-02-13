@@ -34,6 +34,8 @@ pip install -r requirements.txt
 
 ## Example
 
+For more examples of the package functionalities, take a look in the `tests` folder.
+
 ### Create and verify Eddsa signature
 Let's create a simple demo, called `demo.py`, in which we sign a hashed message with the BabyJubJub curve:
 
