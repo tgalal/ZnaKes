@@ -3,7 +3,7 @@ astroid==2.2.5
 attrs==19.1.0
 bitstring==3.1.5
 black==19.3b0
-Click==7.0
+Click==8.1.0
 entrypoints==0.3
 flake8==3.7.7
 hatch==1.9.1
