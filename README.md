@@ -1,5 +1,4 @@
-<!-- TODO: change url to point to `main` branch once merge -->
-<img src="https://raw.githubusercontent.com/ZK-Plus/ZnaKes/8-publish-znakes-package-to-pip/assets/icon.jpg" width="120px" align="right" />
+<img src="https://raw.githubusercontent.com/ZK-Plus/ZnaKes/main/assets/icon.jpg" width="120px" align="right" />
 
 
 # ZnaKes
@@ -28,8 +27,7 @@ Some of these primitives are:
 Make sure you are running a python 3 runtime.
 
 ```bash
-git clone https://github.com/ZK-Plus/ZnaKes.git && cd ZnaKes
-pip install -r requirements.txt
+pip install ZnaKes
 ```
 
 ## Example
