@@ -16,6 +16,9 @@
 
 - Added new tests to all package modules in test_pycounts.py -->
 
+## v0.1.1 (14/02/2024)
+- #12 correct installation guide in README.md and cleanup
+
 ## v0.1.0 (10/01/2024)
 
 - First release of `ZnaKes`
