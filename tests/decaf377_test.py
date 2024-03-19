@@ -2,8 +2,8 @@ import unittest
 
 from os import urandom
 
-from zokrates_pycrypto.fields import BLS12_377Field as FQ
-from zokrates_pycrypto.curves import Decaf377 as JubJub
+from znakes.fields import BLS12_377Field as FQ
+from znakes.curves import Decaf377 as JubJub
 
 
 JUBJUB_C = JubJub.JUBJUB_C
