@@ -35,8 +35,8 @@ from math import ceil, log2
 from os import urandom
 from abc import ABCMeta
 
-from .curves import EdwardsCurve, BabyJubJub, JubJub
-from .fields import FQ, BN128Field, BLS12_381Field
+from .curves import EdwardsCurve, BabyJubJub, JubJub, Decaf377
+from .fields import FQ, BN128Field, BLS12_381Field, BLS12_377Field
 from .utils import to_bytes
 
 
@@ -49,6 +49,8 @@ class PrivateKey:
             field = BN128Field
         elif curve == JubJub:
             field = BLS12_381Field
+        elif curve == Decaf377:
+            field = BLS12_377Field
         else:
             raise ValueError('Edwardscurve not supported')
         self.curve = curve
